@@ -1,0 +1,12 @@
+pkg load image;
+
+%% Read an image
+img = imread('moon.png');  % also try: brooklyn-bridge.png, penny-farthing.png
+imshow(img);
+
+%%Add salt & pepper noise
+noisy_img=imnoise(img,'salt & pepper',0.05);
+imshow(noisy_img);
+%% Apply a median filter 
+med_filter=medfilt2(noisy_img);
+imshow(med_filter);
